@@ -1,0 +1,22 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+v=pd.read_csv("C:\\Users\\Abigail\\Desktop\\hydro1\\Rain Count.csv")
+plt.figure(figsize=(9,4))
+#.set_figwidth(50)
+plt.bar(v["YEARS"],v["RAIN_COUNT"],width= 0.5,color= "blue")
+
+#y_ticks=np.arange(0,75,10)
+#15,45.5,5
+y_ticks=np.arange(500,3000,200)
+plt.yticks(ticks=y_ticks)
+#plt.legend()
+plt.xticks(v["YEARS"])
+plt.title("ANNUAL RAINFALL FREQUENCY 2011-2020")
+plt.xlabel("YEARS")
+plt.ylabel("DAYS")
+#TEMPERATURE(°C)
+#plt.legend(loc="upper right")
+#plt.savefig("Akim_Nyamennea_Tx_Dec_2022.png")
+plt.show()
